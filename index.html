@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar { min-height: 100vh; background-color: #212529; }
+        .sidebar .nav-link { color: #8a8d93; }
+        .sidebar .nav-link.active { background-color: #0d6efd; color: white !important; }
+        .sidebar .nav-link:hover:not(.active) { color: white; }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Боковое меню -->
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar p-3">
+            <div class="d-flex align-items-center mb-3 text-white text-decoration-none">
+                <span class="fs-4 fw-bold">Меню</span>
+            </div>
+            <hr class="text-secondary">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item"><a href="/" class="nav-link active">Главная</a></li>
+                <li><a href="/catalog" class="nav-link">Каталог</a></li>
+                <li><a href="/contacts" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <!-- Основной контент (Карточки тарифов) -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-5 text-center">
+            <h1 class="display-4 mb-4">Наши тарифы</h1>
+            <p class="text-muted mb-5">Выберите подходящий план для вашего бизнеса.</p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-header py-3 bg-light"><h4 class="my-0 fw-normal">Базовый</h4></div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/мес</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>1 пользователь</li>
+                                <li>2 ГБ хранилища</li>
+                                <li>Поддержка по email</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-outline-primary">Начать бесплатно</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm border-primary">
+                        <div class="card-header py-3 text-white bg-primary"><h4 class="my-0 fw-normal">Про</h4></div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/мес</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>20 пользователей</li>
+                                <li>10 ГБ хранилища</li>
+                                <li>Приоритетная поддержка</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-primary">Купить сейчас</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>
