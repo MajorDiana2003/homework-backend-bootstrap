@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        /* Минимальные стили для бокового меню как на прототипе */
+        .sidebar { min-height: 100vh; background-color: #212529; }
+        .sidebar .nav-link { color: #8a8d93; }
+        .sidebar .nav-link.active { background-color: #0d6efd; color: white !important; }
+        .sidebar .nav-link:hover:not(.active) { color: white; }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- ЛЕВАЯ ПАНЕЛЬ: Боковое меню (Sidebar) -->
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar p-3">
+            <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <span class="fs-4 fw-bold"><i class="bi bi-bootstrap-fill me-2"></i>Меню</span>
+            </div>
+            <hr class="text-secondary">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="/" class="nav-link"><i class="bi bi-house-door me-2"></i>Главная</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link"><i class="bi bi-grid me-2"></i>Категории</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link"><i class="bi bi-table me-2"></i>Заказы</a>
+                </li>
+                <li>
+                    <a href="/contacts" class="nav-link active"><i class="bi bi-telephone me-2"></i>Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- ПРАВАЯ ПАНЕЛЬ: Форма и Контакты -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-5 text-center">
+            <h1 class="display-4 mb-5 fw-normal">Контакты</h1>
+
+            <div class="row justify-content-center text-start mt-4">
+                <!-- Форма обратной связи -->
+                <div class="col-md-5 p-4 border rounded bg-light me-md-4 mb-4 mb-md-0">
+                    <form action="/contacts" method="POST">
+                        <div class="mb-3">
+                            <label for="nameInput" class="form-label">Имя</label>
+                            <input type="text" name="username" class="form-control" id="nameInput" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label">Почта</label>
+                            <div class="input-group">
+                                <span class="input-group-text">@</span>
+                                <input type="email" name="email" class="form-control" id="emailInput" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="messageTextarea" class="form-label">Сообщение</label>
+                            <textarea name="message" class="form-control" id="messageTextarea" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Отправить</button>
+                    </form>
+                </div>
+
+                <!-- Текстовый блок справа -->
+                <div class="col-md-5 py-2">
+                    <h3 class="fw-bold mb-3">Наши контакты</h3>
+                    <p class="text-muted" style="line-height: 1.6;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p class="text-muted small mt-4">
+                        While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<!-- Подключаем скрипты Bootstrap -->
+<script src="https://jsdelivr.net"></script>
+</body>
+</html>
